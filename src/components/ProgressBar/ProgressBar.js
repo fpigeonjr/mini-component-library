@@ -6,17 +6,11 @@ import { COLORS } from "../../constants"
 import VisuallyHidden from "../VisuallyHidden"
 
 const ProgressBar = ({ value, size }) => {
-  return (
-    <Wrapper>
-      <progress id="loadinglabel" max="100" value={value}>
-        {value}
-      </progress>
-    </Wrapper>
-  )
+  return <Component id="loadinglabel" max="100" value={value} />
 }
 
-const Wrapper = styled.div`
-  // box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
+const Component = styled.progress`
+  box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
 `
 
 export default ProgressBar
